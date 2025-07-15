@@ -1,50 +1,84 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ピノの森 | 児童発達支援事業所</title>
   <style>
+    :root {
+      --main-color: #a8d8b9;
+      --accent-color: #88c9a1;
+      --text-color: #333;
+      --bg-color: #f4f9f4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       line-height: 1.6;
-      background-color: #f4f9f4;
-      color: #333;
     }
+
     header {
-      background-color: #a8d8b9;
-      padding: 1rem;
+      background-color: var(--main-color);
+      color: white;
+      padding: 1.5rem 1rem;
       text-align: center;
-      color: #fff;
     }
+
     nav {
-      background-color: #88c9a1;
+      background-color: var(--accent-color);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       padding: 0.5rem;
-      text-align: center;
     }
+
     nav a {
-      color: #fff;
-      margin: 0 1rem;
+      color: white;
       text-decoration: none;
+      margin: 0.5rem 1rem;
+      font-size: 1rem;
     }
+
     main {
-      max-width: 800px;
+      max-width: 960px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #a8d8b9;
-      color: #fff;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
+
     section {
       margin-bottom: 2rem;
+    }
+
+    h2 {
+      border-left: 6px solid var(--main-color);
+      padding-left: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background-color: var(--main-color);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        margin: 0.25rem 0;
+      }
     }
   </style>
 </head>
@@ -65,7 +99,7 @@
     <section id="about">
       <h2>🌱 ピノの森について</h2>
       <p>
-        「ピノの森」は、未就学の障害のあるお子さまを対象とした児童発達支援事業所です。<br>
+        「ピノの森」は、未就学の障害のあるお子さまを対象とした児童発達支援事業所です。<br />
         一人ひとりの個性と成長のペースに寄り添い、安心できる環境の中で、日常生活に必要な力や社会とのつながりを育んでいきます。
       </p>
     </section>
@@ -78,13 +112,14 @@
 
     <section id="access">
       <h2>📍 アクセス</h2>
-      <p>住所：〒108-0023 東京都港区芝浦2-1-11 1階	</p>
+      <p>住所：〒108-0023 東京都港区芝浦2-1-11 1階</p>
       <p>最寄駅：田町駅（JR）、芝浦ふ頭駅(ゆりかもめ) 、都バス 海岸三丁目</p>
     </section>
 
     <section id="contact">
-      <h2>📞 お問い合わせ:03-6751-2633</h2>
-      <p>メール：recruit@kapilina.or.jp（現在求人受付のみ）</p>
+      <h2> お問い合わせ</h2>
+      <p>現在、開設準備中につき、お問い合わせはメールにてお願いいたします。</p>
+      <p>メールアドレス：recruit@kapilina.or.jp（現在求人受付のみ）</a></p>
     </section>
   </main>
 
