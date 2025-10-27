@@ -3,153 +3,276 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>カピリナキッズ｜2025年11月開設予定スタッフ募集</title>
+  <title>カピリナキッズ｜2026年1月開設予定・オープニングスタッフ募集</title>
+  <meta name="description" content="港区芝浦に新規オープン予定の児童発達支援・放課後等デイサービス『カピリナキッズ』で保育士・児童指導員のオープニングスタッフを募集。利益追求しない非営利法人で活動の継続性・給与の安定性を確保。ICT導入で業務効率化。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="カピリナキッズ｜2026年1月開設予定・オープニングスタッフ募集" />
+  <meta property="og:description" content="非営利型／固定残業代なし／ICT導入で業務効率化。港区芝浦に新規OPEN予定のカピリナキッズで保育士・児童指導員を募集中。" />
+  <meta property="og:image" content="/ogp.jpg" />
+  <meta name="format-detection" content="telephone=no" />
   <style>
     :root {
       --main-color: #a8d8b9;
-      --accent-color: #88c9a1;
-      --text-color: #333;
-      --bg-color: #f9fdf9;
+      --accent-color: #58b694;
+      --text-color: #2a2a2a;
+      --bg-color: #f7fbf8;
+      --card-bg: #ffffff;
+      --warning: #fff8dc;
     }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      font-family: "Hiragino Kaku Gothic ProN", Meiryo, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
-      line-height: 1.6;
+      line-height: 1.7;
+      letter-spacing: .02em;
     }
-
+    a { color: var(--accent-color); text-underline-offset: 2px; }
     header {
-      background-color: var(--main-color);
-      color: white;
-      padding: 1.5rem;
+      position: relative;
+      background: linear-gradient(135deg, var(--main-color), var(--accent-color));
+      color: #fff;
+      padding: 2.2rem 1rem 2.8rem;
       text-align: center;
+      overflow: hidden;
     }
+    header h1 { margin: 0 0 .4rem; font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; }
+    header p { margin: 0; opacity: .95; font-size: .98rem; }
+    .badge-row { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; }
+    .badge { background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.35); color: #fff; padding: .35rem .6rem; border-radius: 999px; font-size: .85rem; backdrop-filter: blur(4px); }
+    .cta { margin-top: 1.2rem; display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: .5rem; border: none; border-radius: 999px; padding: .8rem 1.1rem; font-weight: 700; cursor: pointer; text-decoration: none; box-shadow: 0 6px 18px rgba(0,0,0,.1); }
+    .btn-primary { background: #ffffff; color: #19664e; }
+    .btn-ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.7); }
+    .container { max-width: 980px; margin: 0 auto; padding: 2rem 1rem; }
+    section { margin-top: 2rem; }
+    h2 { display: flex; align-items: center; gap: .5rem; font-size: clamp(1.2rem, 3vw, 1.5rem); margin: 0 0 1rem; }
+    .card { background: var(--card-bg); border: 1px solid #e8f0ea; border-radius: 14px; padding: 1rem 1rem; box-shadow: 0 4px 16px rgba(0,0,0,.04); }
+    .grid { display: grid; gap: 1rem; }
+    .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .kv { background: var(--warning); border-left: 5px solid var(--accent-color); padding: .9rem 1rem; border-radius: 8px; }
+    ul { padding-left: 1.1rem; margin: .6rem 0; }
+    li { margin: .3rem 0; }
+    .benefits { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; }
+    .benefit { background: #f4fbf7; padding: .7rem .8rem; border-radius: 10px; border: 1px dashed #d7eee0; }
+    .salary { display: grid; grid-template-columns: 1.2fr 1fr; gap: .6rem; }
+    .salary div { padding: .6rem .7rem; border-radius: 10px; border: 1px solid #e8f0ea; background: #fff; }
+    .sticky-cta { position: sticky; bottom: 0; background: rgba(255,255,255,.9); border-top: 1px solid #e8f0ea; backdrop-filter: blur(6px); padding: .6rem; display: flex; justify-content: center; gap: .6rem; z-index: 10; }
+    .map-link { display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; }
+    details { background: #fff; border: 1px solid #e8f0ea; border-radius: 10px; padding: .8rem 1rem; }
+    details + details { margin-top: .6rem; }
+    summary { cursor: pointer; font-weight: 700; }
+    footer { text-align: center; padding: 2rem 1rem; background: var(--main-color); color: white; font-size: .9rem; margin-top: 2rem; }
 
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-
-    h2 {
-      border-left: 6px solid var(--accent-color);
-      padding-left: 0.5rem;
-      margin-top: 2rem;
-      color: var(--text-color);
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    .highlight {
-      background-color: #fff8dc;
-      padding: 0.5rem;
-      border-left: 4px solid var(--accent-color);
-      margin: 1rem 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: var(--main-color);
-      color: white;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.4rem;
-      }
-
-      .container {
-        padding: 1rem;
-      }
+    @media (max-width: 800px) {
+      .grid.cols-2, .grid.cols-3 { grid-template-columns: 1fr; }
+      .benefits { grid-template-columns: 1fr; }
+      .salary { grid-template-columns: 1fr; }
+      .cta { flex-direction: column; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>2025年11月新規オープン！<br>児童発達支援事業所「カピリナキッズ」</h1>
-    <p>オープニングスタッフ募集中！</p>
+  <header role="banner">
+    <h1>＼2026年1月 港区・芝浦に新規OPEN予定／<br>児童発達支援・放課後等デイサービス「カピリナキッズ」</h1>
+    <p>オープニングスタッフ（保育士・児童指導員）を募集しています。</p>
+    <div class="badge-row" aria-label="特徴">
+      <span class="badge">固定・みなし残業代なしで実費支給</span>
+      <span class="badge">非営利法人</span>
+      <span class="badge">ICT導入で効率化</span>
+      <span class="badge">分業制で専門に集中</span>
+    </div>
+    <div class="cta" aria-label="応募ボタン群">
+      <a class="btn btn-primary" href="mailto:recruit2025@kapilina.or.jp?subject=%E3%80%90%E5%BF%9C%E5%8B%9F%E3%80%91%E3%82%AB%E3%83%94%E3%83%AA%E3%83%8A%E3%82%AD%E3%83%83%E3%82%BA&body=%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%E9%9B%BB%E8%A9%B1%EF%BC%9A%0D%0A%E5%BF%9C%E5%8B%9F%E8%81%B7%E7%A8%AE%EF%BC%9A%E4%BF%9D%E8%82%B2%E5%A3%AB%EF%BD%9C%E5%85%90%E7%AB%A5%E6%8C%87%E5%B0%8E%E5%93%A1%0D%0A%E7%B0%A1%E5%8D%98%E3%81%AA%E7%B5%8C%E6%AD%B4%EF%BC%9A%0D%0A">メールで応募する</a>
+      <a class="btn btn-ghost" href="#apply" aria-label="応募条件を確認する">募集要項を見る</a>
+    </div>
   </header>
 
-  <div class="container">
-    <div class="highlight">
-      <strong>オープニング準備段階からの立ち上げを一緒にスタートしませんか！</strong><br>
-      <strong>港区芝浦２丁目の静かな環境に、新しい支援の場が誕生します。</strong><br>
-      <strong>私たちは非営利団体です。子どもたちとご家庭の幸せを第一に考えた支援を実践します。</strong>
+  <div class="container" role="main">
+    <section class="card kv" aria-label="メッセージ">
+      <strong>私たちは、東京都港区芝浦2丁目に2026年1月開所予定の「児童発達支援・放課後等デイサービス カピリナキッズ」です。</strong><br>
+      <strong>オープニングスタッフを募集中。管理者兼務・請求業務なしの明確な分業制で、専門業務に集中できます。</strong><br>
+      <strong>ICT導入で記録や連絡を効率化。固定残業代・みなし残業なし。評価に応じて昇給します。</strong>
+    </section>
+
+    <section class="grid cols-2" id="apply">
+      <div class="card">
+        <h2>📍 就業場所</h2>
+        <p>
+          東京都港区芝浦2丁目1-11 グランドメゾン田町 1F<br>
+          <a class="map-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%B8%AF%E5%8C%BA%E8%8A%9D%E6%B5%A62-1-11">Googleマップで見る</a>
+        </p>
+      </div>
+      <div class="card">
+        <h2>💼 募集職種</h2>
+        <ul>
+          <li>保育士（常勤）</li>
+          <li>児童指導員（常勤）</li>
+        </ul>
+        <p style="font-size:.9rem;color:#555">※児童発達支援管理責任者の募集は別途掲載予定です。</p>
+      </div>
+    </section>
+
+    <section class="grid cols-2">
+      <div class="card">
+        <h2>✅ 応募資格（必須）</h2>
+        <ul>
+          <li>保育士資格 <em>または</em> 児童指導員任用資格</li>
+          <li>基本的なPC操作（記録はICTツールを使用）</li>
+        </ul>
+        <h2>🌟 歓迎要件</h2>
+        <ul>
+          <li>児童発達支援・放課後等デイサービスでの実務経験</li>
+          <li>新規立ち上げに関心がある／改善提案が好き</li>
+          <li>チームで協働し、丁寧なコミュニケーションができる</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🎁 カピリナキッズの魅力</h2>
+        <div class="benefits">
+          <div class="benefit">分業制で事務負担をミニマムに</div>
+          <div class="benefit">ICT導入で記録・連絡を効率化</div>
+          <div class="benefit">非営利法人として子ども・家庭・給与の安定性を最優先</div>
+          <div class="benefit">賞与 年2回</div>
+          <div class="benefit">固定残業代・みなし残業なし</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid cols-2">
+      <div class="card">
+        <h2>💰 給与・手当</h2>
+        <p><strong>【正職員】月給 250,000円〜330,000円</strong></p>
+        <div class="salary" role="table" aria-label="給与内訳">
+          <div role="row">構成：基本給／役職手当／職務手当／資格手当／居住支援特別手当</div>
+          <div role="row">賞与：年2回 ・昇給あり</div>
+          <div role="row">交通費：上限30,000円／月</div>
+          <div role="row">時間外：固定残業代なし（実働超過分は別途支給）</div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>🕒 勤務時間・休日</h2>
+        <ul>
+          <li>勤務時間：8:30〜18:00の間でシフト制（所定8時間／休憩60分）</li>
+          <li>休日：日曜・祝日・平日1日（シフト）</li>
+          <li>休暇：年末年始・夏季・有給休暇（法定どおり）</li>
+        </ul>
+        <h3 style="margin-top:.8rem">📅 1日の流れ（例）</h3>
+        <ul style="font-size:.95rem">
+          <li>09:00 出勤・朝礼・準備</li>
+          <li>10:00 個別支援／小集団活動</li>
+          <li>12:00 休憩</li>
+          <li>13:00 記録（ICT）・打合せ</li>
+          <li>14:30 受入・集団活動</li>
+          <li>17:30 記録・片付け／退勤</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid cols-2">
+      <div class="card">
+        <h2>📮 応募方法</h2>
+        <ol>
+          <li>「メールで応募する」をクリック</li>
+          <li>お名前・お電話番号・応募職種・簡単な経歴をご入力の上、送信</li>
+          <li>2営業日以内にご連絡いたします</li>
+        </ol>
+        <p>メールアドレス：<a href="mailto:recruit2025@kapilina.or.jp">recruit2025@kapilina.or.jp</a></p>
+      </div>
+      <div class="card">
+        <h2>🧭 選考フロー</h2>
+        <ul>
+          <li>書類（メール）応募</li>
+          <li>面接・現地見学</li>
+          <li>内定・条件面談</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>❓ よくある質問</h2>
+      <details>
+         <summary>未経験でも応募できますか？</summary>
+        <div>資格があれば応募可能です。OJT体制を整え、立ち上げ期は特に丁寧にサポートします。</div>
+      </details>
+      <details>
+         <summary>年齢制限はありますか？</summary>
+        <div>「高年齢者雇用安定法」により年齢制限はありませんので、資格および経験があり健康な方は、ぜひ応募願います。</div>
+      </details>
+      <details>
+        <summary>固定残業代または、みなし残業代はありますか？</summary>
+        <div>ありません。実労働時間の超過分は法令に基づき別途支給します。</div>
+      </details>
+      <details>
+        <summary>ICTツールは何を使いますか？</summary>
+        <div>Ipadを使用し記録・情報共有の専用システムを導入します。</div>
+      </details>
+      <details>
+        <summary>勤務開始時期はいつですか？</summary>
+        <div>2025年内からの準備採用・研修開始も相談可能です。お気軽にご相談ください。</div>
+      </details>
+    </section>
+
+    <section class="card" aria-label="想い">
+      <h2>🌈 メッセージ</h2>
+      <p>
+        子どもたちと保護者の「できた」を一緒に積み重ね、
+        安心できる居場所をつくる—それがカピリナキッズの願いです。
+        共感してくださる方、まずは気軽にご連絡ください。
+      </p>
+    </section>
+
+    <div class="sticky-cta" aria-hidden="false">
+      <a class="btn btn-primary" href="mailto:recruit2025@kapilina.or.jp?subject=%E3%80%90%E5%BF%9C%E5%8B%9F%E3%80%91%E3%82%AB%E3%83%94%E3%83%AA%E3%83%8A%E3%82%AD%E3%83%83%E3%82%BA&body=%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%E9%9B%BB%E8%A9%B1%EF%BC%9A%0D%0A%E5%BF%9C%E5%8B%9F%E8%81%B7%E7%A8%AE%EF%BC%9A%E4%BF%9D%E8%82%B2%E5%A3%AB%EF%BD%9C%E5%85%90%E7%AB%A5%E6%8C%87%E5%B0%8E%E5%93%A1%0D%0A%E7%B0%A1%E5%8D%98%E3%81%AA%E7%B5%8C%E6%AD%B4%EF%BC%9A%0D%0A">メールで応募する</a>
+      <a class="btn btn-ghost" href="#apply">募集要項</a>
     </div>
-
-    <h2>📍就業場所</h2>
-    <p>東京都港区芝浦2丁目1-11 グランドメゾン田町1階（2025年11月開設予定）</p>
-
-    <h2>💼 募集職種</h2>
-    <ul>
-      <li>児童発達支援管理責任者</li>
-    </ul>
-
-    <h2>🌟 こんな方を歓迎します</h2>
-    <ul>
-      <li児童発達支援管理責任者の研修受講済の方（経験者のみ）</li>
-      <li>子どもと関わることが好きな方</li>
-      <li>発達支援の経験を活かしたい方</li>
-      <li>新規立ち上げに関心のある方</li>
-      <li>チームで協力して支援に取り組みたい方</li>
-    </ul>
-
-    <h2>🎁 カピリナキッズの魅力</h2>
-    <ul>
-<li><span class="check-icon">✅ 開業準備段階からの新しい環境でのかかわり</li>
-<li><span class="check-icon">✅ あなたの経験や想いを反映した支援体制づくり</li>
-<li><span class="check-icon">✅ 駅チカで通勤便利</li>
-<li><span class="check-icon">✅ 各種手当（処遇改善・資格手当など）あり</li>
-<li><span class="check-icon">✅ ICT活用で事務負担を軽減！子どもとの関わりを大切にできます</li>
-    </ul>
-
-    <h2>💰 給与・手当</h2>
-    <ul>
-      <li>給与内訳</li>
-      <ul>
-        <li>基本給：230,000円～250,000円</li>
-        <li>役職手当：10,000円～20,000円</li>
-        <li>職務給手当：10,000円～25,000円</li>
-        <li>資格給手当：10,000円～15,000円</li>
-        <li>処遇改善手当：20,000円～30,000円</li>
-      </ul>
-      <li>固定残業代なし</li>
-      <li>賞与あり（3ヶ月分）</li>
-      <li>昇給あり</li>
-      <li>交通費支給（上限：20,000円/月）</li>
-      <li>試用期間：3ヶ月（条件変更なし）</li>
-    </ul>
-
-    <h2>🕒 勤務時間・休日</h2>
-    <ul>
-      <li>勤務時間：8:30～17:00（休憩60分）</li>
-      <li>日曜、祝日、平日1日（シフト）</li>
-      <li>年間休日120日</li>
-      <li>年末年始休暇・夏季休暇・有給休暇あり</li>
-    </ul>
-
-
-    <h2>🌈 メッセージ</h2>
-    <p>
-      子どもたちと一緒に成長し、保護者とも信頼を築きながら、温かな空間を作っていきたい。<br>
-      そんな想いに共感していただける方、ぜひ一度ご連絡ください。<br><br>
-      ＼ご応募・お問い合わせを心よりお待ちしています！／
-    </p>
   </div>
 
   <footer>
-    &copy; 2025 カピリナキッズ 児童発達支援事業所
+    &copy; 2025 児童発達支援・放課後等デイサービス カピリナキッズ
   </footer>
+
+  <!-- 構造化データ：JobPosting（検索での露出強化） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "保育士／児童指導員（オープニングスタッフ）",
+    "description": "港区芝浦に新規オープン予定の児童発達支援・放課後等デイサービス『カピリナキッズ』で、保育士・児童指導員のオープニングスタッフを募集します。固定残業代なし、ICT導入で業務効率化。",
+    "datePosted": "2025-10-27",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": {
+      "@type": "Organization",
+      "name": "カピリナキッズ",
+      "sameAs": "https://kapilina.or.jp"
+    },
+    "jobLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "JP",
+        "addressRegion": "東京都",
+        "addressLocality": "港区",
+        "streetAddress": "芝浦2丁目1-11 グランドメゾン田町 1F"
+      }
+    },
+    "baseSalary": {
+      "@type": "MonetaryAmount",
+      "currency": "JPY",
+      "value": {
+        "@type": "QuantitativeValue",
+        "minValue": 250000,
+        "maxValue": 330000,
+        "unitText": "MONTH"
+      }
+    },
+    "incentiveCompensation": "賞与 年2回",
+    "qualifications": "保育士資格または児童指導員任用資格",
+    "industry": "児童福祉",
+    "workHours": "8:30〜18:00の間でシフト制（所定8時間／休憩60分）"
+  }
+  </script>
 </body>
 </html>
