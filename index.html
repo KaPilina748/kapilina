@@ -376,3 +376,293 @@
       margin-top: 12px;
     }
     .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.85);
+      box-shadow: 0 12px 22px rgba(0,0,0,.08);
+      text-decoration:none;
+      font-weight: 1000;
+    }
+    .btn:hover{ transform: translateY(-1px); }
+    .btn.primary{
+      background: rgba(242,164,91,.22);
+      border-color: rgba(242,164,91,.35);
+    }
+
+    .note{
+      margin: 10px 0 0;
+      color: #2a516b;
+      font-weight: 900;
+      font-size: 13.5px;
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+    }
+    .note .nicon{
+      width: 40px; height: 40px;
+      border-radius: 14px;
+      background: rgba(45,125,224,.14);
+      border: 1px solid rgba(45,125,224,.22);
+      display:flex; align-items:center; justify-content:center;
+      flex: 0 0 auto;
+    }
+    .note .nicon svg{ width: 22px; height: 22px; }
+    footer{
+      margin-top: 16px;
+      text-align:center;
+      color: rgba(11,45,77,.55);
+      font-weight: 800;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- decorative stars -->
+  <svg class="star s1" viewBox="0 0 100 100" aria-hidden="true">
+    <path d="M50 7 C57 22, 78 18, 84 33 C90 49, 70 53, 70 67 C70 82, 52 80, 50 93 C48 80, 30 82, 30 67 C30 53, 10 49, 16 33 C22 18, 43 22, 50 7Z"
+          fill="#f2a45b"/>
+  </svg>
+  <svg class="star s2" viewBox="0 0 100 100" aria-hidden="true">
+    <path d="M50 7 C57 22, 78 18, 84 33 C90 49, 70 53, 70 67 C70 82, 52 80, 50 93 C48 80, 30 82, 30 67 C30 53, 10 49, 16 33 C22 18, 43 22, 50 7Z"
+          fill="#f2a45b"/>
+  </svg>
+  <svg class="star s3" viewBox="0 0 100 100" aria-hidden="true">
+    <path d="M50 7 C57 22, 78 18, 84 33 C90 49, 70 53, 70 67 C70 82, 52 80, 50 93 C48 80, 30 82, 30 67 C30 53, 10 49, 16 33 C22 18, 43 22, 50 7Z"
+          fill="#f2a45b"/>
+  </svg>
+
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <!-- 同階層に logo.jpg を置く（KAPILINAロゴ画像をリネーム） -->
+          <img src="logo.jpg" alt="カピリナキッズ ロゴ">
+        </div>
+        <div style="min-width:0">
+          <h1>児童発達支援・放課後等デイサービス<br>カピリナキッズ</h1>
+          <p>〒108-0023 東京都港区芝浦2丁目1番11号 グランドメゾン田町1F</p>
+        </div>
+      </div>
+
+      <div class="top-badges">
+        <div class="badge orange">2月1日オープン</div>
+        <div class="badge blue">相談・見学・体験 受付中</div>
+      </div>
+    </header>
+
+    <section class="hero" aria-label="ヒーロー">
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">児童発達支援・放課後等デイサービス</p>
+          <h2 class="title"><span class="pill">2月1日オープン児童募集</span></h2>
+          <p class="sub">発達に特性のあるお子さんや、支援が必要なお子さんの成長をサポートします。</p>
+          <ul class="bullets">
+            <li>遊びや学びを通して、生活の力や人とのつながり、こころの育ちを育みます。</li>
+            <li>お子さまの成長を支えるだけでなく、保護者の不安や悩みにも寄り添います。</li>
+          </ul>
+
+          <div class="top-badges" style="margin-top:12px; justify-content:flex-start;">
+            <div class="badge">全員保育士・児童指導員 有資格者</div>
+            <div class="badge">看護師 常駐</div>
+          </div>
+        </div>
+
+        <div class="hero-right" aria-label="イメージ">
+          <!-- 画像が無い場合でも破綻しないように fallback 表示 -->
+          <div class="circle big">
+            <img src="hero1.jpg" alt="活動の様子（任意画像）" onerror="this.remove(); this.parentElement.classList.add('fallback'); this.parentElement.textContent='PHOTO';">
+          </div>
+          <div class="circle small">
+            <img src="hero2.jpg" alt="活動の様子（任意画像）" onerror="this.remove(); this.parentElement.classList.add('fallback'); this.parentElement.textContent='PHOTO';">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="内容">
+      <div class="card" aria-label="Programs">
+        <div class="programs-title">
+          <div class="eng">PROGRAMS</div>
+          <div class="pillnote">一人ひとりに合わせた支援</div>
+        </div>
+
+        <div class="prog-stack">
+          <div class="prog blue">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M21 21l-4.2-4.2" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="10" cy="10" r="6" stroke="#fff" stroke-width="2"/>
+              </svg>
+            </div>
+            <div>
+              <h3>個別療育・小集団療育</h3>
+              <p>お子さま一人ひとりの特性やペースに合わせて、「できた！」をふやす支援を行います。少人数で関わり方や社会性も育てます。</p>
+            </div>
+          </div>
+
+          <div class="prog red">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 20V7l7-3 7 3v13" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                <path d="M9 20v-7h6v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>課題の個別に対応した自立支援</h3>
+              <p>学校での学びや生活に必要な力を、楽しみながら身につけていきます。</p>
+            </div>
+          </div>
+
+          <div class="prog navy">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 12c2-5 8-5 10 0" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 21c-4-2-7-6-7-11a7 7 0 0 1 14 0c0 5-3 9-7 11z" stroke="#fff" stroke-width="2"/>
+              </svg>
+            </div>
+            <div>
+              <h3>保護者支援</h3>
+              <p>ご家庭での関わりやお困りごとを一緒に考え、安心して子育てができるよう寄り添います。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" aria-label="ご利用の流れ">
+        <h2 class="h2">ご利用の流れ</h2>
+        <p class="mini">まずはお気軽にお問い合わせください</p>
+
+        <div class="flow">
+          <div class="step">
+            <div class="check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 7L10 17l-5-5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="stepbox">まずはお気軽にお問い合わせください</div>
+          </div>
+
+          <div class="step">
+            <div class="check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 7L10 17l-5-5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="stepbox">見学・体験</div>
+          </div>
+
+          <div class="step">
+            <div class="check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 7L10 17l-5-5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="stepbox">受給者証の申請</div>
+          </div>
+
+          <div class="step">
+            <div class="check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 7L10 17l-5-5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="stepbox">ご契約・個別支援計画の作成</div>
+          </div>
+        </div>
+
+        <details>
+          <summary>児童発達支援（時間・流れ）</summary>
+          <p><strong>時間：</strong>9:30 / 11:20 / 14:00 / 16:00（各100分）</p>
+          <ol>
+            <li>来所・手洗い・うがい・健康チェック・始まりの会</li>
+            <li>個別支援プログラム</li>
+            <li>小集団活動プログラム</li>
+            <li>自由遊び・片付け・帰宅準備・帰りの会</li>
+            <li>フィードバック・退所</li>
+          </ol>
+        </details>
+
+        <details>
+          <summary>放課後等デイサービス（時間・流れ）</summary>
+          <p><strong>時間：</strong>14:30〜17:40</p>
+          <ol>
+            <li>来所・手洗い・うがい・健康チェック・おやつ</li>
+            <li>始まりの会</li>
+            <li>個別支援プログラム</li>
+            <li>小集団活動プログラム</li>
+            <li>片付け・帰宅準備・帰りの会</li>
+            <li>退所</li>
+          </ol>
+        </details>
+
+        <div class="note">
+          <div class="nicon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 3a7 7 0 0 0-7 7v4a3 3 0 0 0 3 3h1l1 3h4l1-3h1a3 3 0 0 0 3-3v-4a7 7 0 0 0-7-7z"
+                    stroke="#2d7de0" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M9 10h6" stroke="#2d7de0" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>看護師在籍しておりますので、発作・医療的ケアのあるお子さまはご相談ください。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="連絡先">
+      <div class="card">
+        <h2 class="h2">連絡先</h2>
+        <dl class="dl">
+          <div class="dt">住所</div>
+          <p class="dd">〒108-0023 東京都港区芝浦2丁目1番11号<br>グランドメゾン田町1F</p>
+
+          <div class="dt">TEL</div>
+          <p class="dd"><a href="tel:0367512633">03-6751-2633</a>　（担当）大塚</p>
+
+          <div class="dt">MAIL</div>
+          <p class="dd"><a href="mailto:info@kapilina.or.jp">info@kapilina.or.jp</a></p>
+        </dl>
+
+        <div class="btnrow">
+          <a class="btn primary" href="https://maps.app.goo.gl/7uNcNEGoDb6kfh1SA" target="_blank" rel="noopener">
+            Googleマップはこちら
+          </a>
+          <a class="btn" href="mailto:info@kapilina.or.jp">メールで問い合わせる</a>
+        </div>
+
+        <p class="mini" style="margin-top:12px;">
+          “BRIGHT BEGINNINGS, HAPPY HEARTS, AND ENDLESS POSSIBILITIES.”
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="h2">このページの使い方（画像差し替え）</h2>
+        <p class="mini">
+          パンフの丸写真に合わせる場合は、リポジトリ直下に以下を置いてください。<br>
+          <strong>hero1.jpg</strong>（大きい丸）／<strong>hero2.jpg</strong>（小さい丸）<br>
+          ※無い場合は「PHOTO」と表示されます。
+        </p>
+        <div class="contact-grid">
+          <details>
+            <summary>よくある調整（任意）</summary>
+            <p>
+              ・「2月1日オープン」の文言をもっと目立たせる → titleの文字サイズを上げる<br>
+              ・QRを載せたい → 画像（qr.png）を置いて、連絡先カードに &lt;img&gt; 追加<br>
+              ・写真を横長帯にしたい → Hero右側を画像バナーに変更
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © Kapilina Kids
+    </footer>
+  </div>
+</body>
+</html>
