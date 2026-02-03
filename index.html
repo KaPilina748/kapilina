@@ -444,10 +444,14 @@
   color:#5f7a80;   /* やわらかいグレー寄り */
   font-weight:600;
 }
+.brand-text{
+  display:flex;
+  flex-direction:column;
+}
 .brand-badge{
   display:flex;
   justify-content:flex-end; /* 右寄せ */
-  margin-top: 8px;
+  margin-top: 6px;
 }
     
   </style>
@@ -475,13 +479,13 @@
           <!-- 同階層に logo.jpg を置く（KAPILINAロゴ画像をリネーム） -->
           <img src="logo.jpg" alt="カピリナキッズ ロゴ">
         </div>
-        <div style="min-width:0">
-          <h1>児童発達支援・放課後等デイサービス<br>カピリナキッズ</h1>
-          <p>〒108-0023 東京都港区芝浦2丁目1番11号 グランドメゾン田町1F</p>
-        </div>
-      </div>
-<div class="brand-badge">
-  <div class="badge blue badge-big">相談・見学・体験 受付中</div>
+  <div class="brand-text">
+  <h1>児童発達支援・放課後等デイサービス<br>カピリナキッズ</h1>
+  <p>〒108-0023 東京都港区芝浦2丁目1番11号 グランドメゾン田町1F</p>
+
+  <div class="brand-badge">
+    <div class="badge blue badge-big">相談・見学・体験 受付中</div>
+  </div>
 </div>
      
     </header>
@@ -666,6 +670,7 @@
   </div>
 </body>
 </html>
+
 
 
 
