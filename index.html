@@ -239,12 +239,24 @@
 
     /* programs */
     .programs-title{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:10px;
-      margin-bottom: 12px;
-    }
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom: 12px;
+}
+
+/* 追加：モバイルでは縦並びにして途切れ防止 */
+@media (max-width: 520px){
+  .programs-title{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pillnote{
+    white-space: normal;   /* 折り返しOKに */
+  }
+}
+
     .programs-title .eng{
       font-weight: 1000;
       letter-spacing: .08em;
@@ -647,4 +659,5 @@
   </div>
 </body>
 </html>
+
 
