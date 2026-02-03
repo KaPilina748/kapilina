@@ -1,663 +1,123 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>カピリナキッズ｜2月1日オープン児童募集</title>
-  <meta name="description" content="児童発達支援・放課後等デイサービス カピリナキッズ（港区芝浦）。相談・見学・体験受付中。" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>カピリナキッズ｜2月1日オープン児童募集</title>
 
-  <style>
+<style>
 :root{
-  --bg: #eefff5;          /* ベース：やわらかいミントグリーン */
+  --bg:#caffdf;
+  --ink:#1d3b4a;
+  --muted:#476a74;
+  --white:#ffffff;
 
-  /* 文字色：濃紺→少しだけ軽く（重く見えない） */
-  --ink: #1d3b4a;
-  --muted: #476a74;
-  --white: #ffffff;
+  --accent:#f0b27a;
+  --accent2:#6aaad6;
+  --accent3:#e68a7a;
+  --navyCard:#2b5562;
 
-  /* アクセント：ビビッド→くすみパステル寄り */
-  --accent:  #f0b27a;     /* オレンジ（やわらか） */
-  --accent2: #95E7FA;     /* ブルー（スモーキー） */
-  --accent3: #e68a7a;     /* 赤橙（コーラル寄り） */
+  --leaf:#D2FAA0;
 
-  /* 濃紺カード：黒っぽさを減らしてグリーン背景に馴染ませる */
-  --navyCard:#cbc0f5;
-      --radius: 22px;
-      --shadow: 0 14px 35px rgba(0,0,0,.08);
-      --max: 1040px;
-    }
-
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
-      color: var(--ink);
-      background: var(--bg);
-      line-height: 1.7;
-    }
-    a{ color: inherit; }
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 26px 18px 70px;
-      position: relative;
-    }
-
-    /* little stars */
-    .star{
-      position:absolute;
-      width: 54px; height:54px;
-      opacity:.9;
-      filter: drop-shadow(0 10px 16px rgba(0,0,0,.08));
-    }
-    .star.s1{ top: 120px; left: 16px; transform: rotate(10deg); }
-    .star.s2{ top: 520px; left: 36px; transform: rotate(-12deg); opacity:.75;}
-    .star.s3{ top: 140px; right: 34px; transform: rotate(-6deg); opacity:.8;}
-    @media (max-width: 780px){
-      .star{ display:none; }
-    }
-
-    /* top bar */
-    header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 14px;
-      padding: 6px 0 18px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap: 14px;
-      min-width: 0;
-    }
-    .logo{
-      width: 68px; height: 68px;
-      border-radius: 18px;
-      background: rgba(255,255,255,.65);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      flex:0 0 auto;
-    }
-    .logo img{ width:100%; height:100%; object-fit:cover; display:block; }
-    .brand h1{
-      margin:0;
-      font-size: 16px;
-      line-height: 1.35;
-      letter-spacing: .02em;
-    }
-    .brand p{
-      margin:4px 0 0;
-      font-size: 12.5px;
-      color: var(--muted);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 62vw;
-    }
-    .top-badges{
-      display:flex;
-      gap:10px;
-      flex-wrap: wrap;
-      justify-content:flex-end;
-    }
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 10px 12px;
-      border-radius: 999px;
-      font-weight: 900;
-      font-size: 12.5px;
-      border: 1px solid rgba(0,0,0,.08);
-      background: rgba(255,255,255,.7);
-      box-shadow: 0 10px 24px rgba(0,0,0,.06);
-      white-space: nowrap;
-    }
-    .badge.orange{ border-color: rgba(242,164,91,.35); }
-    .badge.blue{ border-color: rgba(45,125,224,.25); }
-
-    /* hero */
-    .hero{
-      background: rgba(255,255,255,.68);
-      border: 1px solid rgba(255,255,255,.7);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 22px;
-      overflow:hidden;
-      position: relative;
-    }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 18px;
-      align-items: center;
-    }
-    @media (max-width: 900px){
-      .hero-grid{ grid-template-columns: 1fr; }
-    }
-
-    .kicker{
-      font-weight: 900;
-      letter-spacing: .06em;
-      font-size: 14px;
-      margin: 0 0 8px;
-      color: var(--ink);
-    }
-    .title{
-      margin: 0;
-      font-size: 42px;
-      line-height: 1.05;
-      letter-spacing: .02em;
-    }
-    .title .pill{
-      display:inline-block;
-      padding: 8px 14px;
-      border-radius: 18px;
-      background: rgba(242,164,91,.25);
-      border: 1px solid rgba(242,164,91,.35);
-    }
-    .sub{
-      margin: 12px 0 0;
-      font-size: 15px;
-      font-weight: 800;
-      color: #1c3f5a;
-    }
-    .bullets{
-      margin: 12px 0 0;
-      padding-left: 18px;
-      color: #1c3f5a;
-      font-weight: 700;
-      font-size: 14px;
-    }
-    .bullets li{ margin: 6px 0; }
-
-    .hero-right{
-      position: relative;
-      min-height: 260px;
-    }
-    .circle{
-      width: 210px; height: 210px;
-      border-radius: 999px;
-      border: 12px solid rgba(242,164,91,.85);
-      background: rgba(255,255,255,.9);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .circle img{ width:100%; height:100%; object-fit:cover; display:block; }
-    .circle.small{
-      width: 128px; height: 128px;
-      border-width: 10px;
-      position:absolute;
-      bottom: -4px;
-      left: 120px;
-    }
-    .circle.big{
-      position:absolute;
-      top: 0;
-      right: 0;
-    }
-    .circle.fallback{
-      display:flex; align-items:center; justify-content:center;
-      font-weight: 900;
-      color: rgba(11,45,77,.6);
-      letter-spacing:.06em;
-    }
-    @media (max-width: 900px){
-      .hero-right{ min-height: 240px; }
-      .circle.big{ right: auto; left: 0; }
-      .circle.small{ left: 150px; }
-    }
-
-    /* layout blocks */
-    .grid{
-      margin-top: 16px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-    @media (max-width: 900px){
-      .grid{ grid-template-columns: 1fr; }
-    }
-
-    .card{
-      background: rgba(255,255,255,.72);
-      border: 1px solid rgba(255,255,255,.75);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 18px;
-      position: relative;
-      overflow:hidden;
-    }
-    .h2{
-      margin:0 0 10px;
-      font-size: 22px;
-      letter-spacing:.02em;
-    }
-    .mini{
-      margin:0;
-      color: var(--muted);
-      font-weight: 700;
-      font-size: 13.5px;
-    }
-
-    /* programs */
-    .programs-title{
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:10px;
-  margin-bottom: 12px;
+  --radius:22px;
+  --shadow:0 14px 35px rgba(0,0,0,.08);
+  --max:1040px;
 }
 
-/* 追加：モバイルでは縦並びにして途切れ防止 */
-@media (max-width: 520px){
-  .programs-title{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .pillnote{
-    white-space: normal;   /* 折り返しOKに */
-  }
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+}
+.wrap{max-width:var(--max);margin:auto;padding:24px 16px 60px;}
+
+.star path{fill:var(--leaf);}
+.star{position:absolute;width:60px;opacity:.8}
+.s1{top:120px;left:10px}.s2{top:520px;left:30px}.s3{top:140px;right:30px}
+@media(max-width:780px){.star{display:none}}
+
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.logo{width:70px;height:70px;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.logo img{width:100%;height:100%;object-fit:cover}
+.badge{background:#fff;padding:10px 14px;border-radius:999px;font-weight:700;box-shadow:var(--shadow)}
+.badge-big{font-size:16px;padding:12px 18px}
+
+.hero{background:rgba(255,255,255,.75);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+
+.title{font-size:40px;margin:0 0 10px}
+.title span{background:var(--accent);padding:6px 14px;border-radius:18px}
+.sub{font-weight:700}
+
+.circle{border-radius:50%;overflow:hidden;box-shadow:var(--shadow);border:10px solid var(--accent)}
+.big{width:220px;height:220px}
+.small{width:130px;height:130px;margin-top:-40px;margin-left:120px}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+
+.card{background:rgba(255,255,255,.8);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+
+.programs-title{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:10px}
+@media(max-width:520px){
+  .programs-title{flex-direction:column;align-items:flex-start}
 }
 
-    .programs-title .eng{
-      font-weight: 1000;
-      letter-spacing: .08em;
-      font-size: 34px;
-    }
-    .pillnote{
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(45,125,224,.12);
-      border: 1px solid rgba(45,125,224,.22);
-      font-weight: 900;
-      font-size: 12.5px;
-      white-space: nowrap;
-    }
+.pillnote{background:rgba(106,170,214,.15);padding:8px 12px;border-radius:999px;font-weight:700}
 
-    .prog-stack{
-      display:grid;
-      gap: 12px;
-    }
-    .prog{
-      border-radius: 22px;
-      padding: 14px 14px 14px 14px;
-      color:#fff;
-      display:grid;
-      grid-template-columns: 52px 1fr;
-      gap: 12px;
-      align-items:center;
-      box-shadow: 0 16px 28px rgba(0,0,0,.10);
-    }
-    .prog.blue{ background: var(--accent2); }
-    .prog.red{ background: var(--accent3); }
-    .prog.navy{ background: var(--navyCard); }
-    .prog h3{
-      margin:0;
-      font-size: 15px;
-      letter-spacing:.02em;
-    }
-    .prog p{
-      margin: 6px 0 0;
-      font-size: 13px;
-      opacity:.95;
-      font-weight: 600;
-      line-height: 1.55;
-    }
-    .ico{
-      width: 52px; height: 52px;
-      border-radius: 18px;
-      background: rgba(255,255,255,.18);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-    .ico svg{ width: 28px; height: 28px; }
-
-    /* flow */
-    .flow{
-      display:grid;
-      gap: 12px;
-      margin-top: 10px;
-    }
-    .step{
-      display:grid;
-      grid-template-columns: 44px 1fr;
-      gap: 12px;
-      align-items:center;
-    }
-    .check{
-      width: 44px; height: 44px;
-      border-radius: 999px;
-      background: #d94b2c;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      box-shadow: 0 12px 20px rgba(217,75,44,.25);
-    }
-    .check svg{ width: 22px; height: 22px; }
-    .stepbox{
-      background: rgba(255,255,255,.75);
-      border: 1px solid rgba(0,0,0,.06);
-      border-radius: 16px;
-      padding: 12px 14px;
-      font-weight: 900;
-    }
-
-    /* details */
-    details{
-      margin-top: 10px;
-      background: rgba(255,255,255,.65);
-      border: 1px solid rgba(0,0,0,.06);
-      border-radius: 18px;
-      padding: 12px 14px;
-    }
-    summary{
-      cursor:pointer;
-      font-weight: 1000;
-      color: var(--ink);
-      letter-spacing:.02em;
-    }
-    details p, details ol{
-      margin: 10px 0 0;
-      color:#1c3f5a;
-      font-weight: 700;
-      font-size: 13.5px;
-    }
-    details ol{ padding-left: 18px; }
-    details li{ margin: 6px 0; }
-
-    /* contact */
-    .contact-grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .dl{
-      display:grid;
-      grid-template-columns: 92px 1fr;
-      gap: 10px 12px;
-      margin: 0;
-      font-size: 14px;
-    }
-    .dt{ font-weight: 1000; color: #123d5b; }
-    .dd{ margin:0; color:#123d5b; font-weight:800; }
-
-    .btnrow{
-      display:flex;
-      flex-wrap:wrap;
-      gap: 10px;
-      margin-top: 12px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding: 12px 14px;
-      border-radius: 16px;
-      border: 1px solid rgba(0,0,0,.08);
-      background: rgba(255,255,255,.85);
-      box-shadow: 0 12px 22px rgba(0,0,0,.08);
-      text-decoration:none;
-      font-weight: 1000;
-    }
-    .btn:hover{ transform: translateY(-1px); }
-    .btn.primary{
-      background: rgba(242,164,91,.22);
-      border-color: rgba(242,164,91,.35);
-    }
-
-    .note{
-      margin: 10px 0 0;
-      color: #2a516b;
-      font-weight: 900;
-      font-size: 13.5px;
-      display:flex;
-      gap: 10px;
-      align-items:flex-start;
-    }
-    .note .nicon{
-      width: 40px; height: 40px;
-      border-radius: 14px;
-      background: rgba(45,125,224,.14);
-      border: 1px solid rgba(45,125,224,.22);
-      display:flex; align-items:center; justify-content:center;
-      flex: 0 0 auto;
-    }
-    .note .nicon svg{ width: 22px; height: 22px; }
-    footer{
-      margin-top: 16px;
-      text-align:center;
-      color: rgba(11,45,77,.55);
-      font-weight: 800;
-      font-size: 12px;
-    }
-  </style>
+footer{text-align:center;margin-top:30px;font-size:12px;color:var(--muted)}
+.btn{display:inline-block;margin-top:12px;background:#fff;padding:12px 16px;border-radius:14px;box-shadow:var(--shadow);text-decoration:none;font-weight:700}
+</style>
 </head>
 
 <body>
-  <!-- decorative stars -->
-  <svg class="star s1" viewBox="0 0 100 100" aria-hidden="true">
-    <path d="M50 7 C57 22, 78 18, 84 33 C90 49, 70 53, 70 67 C70 82, 52 80, 50 93 C48 80, 30 82, 30 67 C30 53, 10 49, 16 33 C22 18, 43 22, 50 7Z"
-          fill="#D2FAA0"/>
-  </svg>
-  <svg class="star s2" viewBox="0 0 100 100" aria-hidden="true">
-    <path d="M50 7 C57 22, 78 18, 84 33 C90 49, 70 53, 70 67 C70 82, 52 80, 50 93 C48 80, 30 82, 30 67 C30 53, 10 49, 16 33 C22 18, 43 22, 50 7Z"
-          fill="#D2FAA0"/>
-  </svg>
-  <svg class="star s3" viewBox="0 0 100 100" aria-hidden="true">
-    <path d="M50 7 C57 22, 78 18, 84 33 C90 49, 70 53, 70 67 C70 82, 52 80, 50 93 C48 80, 30 82, 30 67 C30 53, 10 49, 16 33 C22 18, 43 22, 50 7Z"
-          fill="#D2FAA0"/>
-  </svg>
 
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">
-          <!-- 同階層に logo.jpg を置く（KAPILINAロゴ画像をリネーム） -->
-          <img src="logo.jpg" alt="カピリナキッズ ロゴ">
-        </div>
-        <div style="min-width:0">
-          <h1>児童発達支援・放課後等デイサービス<br>カピリナキッズ</h1>
-          <p>〒108-0023 東京都港区芝浦2丁目1番11号 グランドメゾン田町1F</p>
-        </div>
-      </div>
+<svg class="star s1" viewBox="0 0 100 100"><path d="M50 7C57 22 78 18 84 33C90 49 70 53 70 67C70 82 52 80 50 93C48 80 30 82 30 67C30 53 10 49 16 33C22 18 43 22 50 7Z"/></svg>
+<svg class="star s2" viewBox="0 0 100 100"><path d="M50 7C57 22 78 18 84 33C90 49 70 53 70 67C70 82 52 80 50 93C48 80 30 82 30 67C30 53 10 49 16 33C22 18 43 22 50 7Z"/></svg>
+<svg class="star s3" viewBox="0 0 100 100"><path d="M50 7C57 22 78 18 84 33C90 49 70 53 70 67C70 82 52 80 50 93C48 80 30 82 30 67C30 53 10 49 16 33C22 18 43 22 50 7Z"/></svg>
 
-      <div class="top-badges">
-        <div class="badge orange">2月1日オープン</div>
-        <div class="badge blue">相談・見学・体験 受付中</div>
-      </div>
-    </header>
+<div class="wrap">
+<header>
+  <div class="logo"><img src="logo.jpg" alt=""></div>
+  <div class="badge badge-big">相談・見学・体験 受付中</div>
+</header>
 
-    <section class="hero" aria-label="ヒーロー">
-      <div class="hero-grid">
-        <div>
-          <p class="kicker">児童発達支援・放課後等デイサービス</p>
-          <h2 class="title"><span class="pill">2月1日オープン児童募集</span></h2>
-          <p class="sub">発達に特性のあるお子さんや、支援が必要なお子さんの成長をサポートします。</p>
-          <ul class="bullets">
-            <li>遊びや学びを通して、生活の力や人とのつながり、こころの育ちを育みます。</li>
-            <li>お子さまの成長を支えるだけでなく、保護者の不安や悩みにも寄り添います。</li>
-          </ul>
-
-          <div class="top-badges" style="margin-top:12px; justify-content:flex-start;">
-            <div class="badge">全員保育士・児童指導員 有資格者</div>
-            <div class="badge">看護師 常駐</div>
-          </div>
-        </div>
-    </section>
-
-    <section class="grid" aria-label="内容">
-      <div class="card" aria-label="Programs">
-        <div class="programs-title">
-          <div class="eng">PROGRAMS</div>
-          <div class="pillnote">一人ひとりに合わせた支援</div>
-        </div>
-
-        <div class="prog-stack">
-          <div class="prog blue">
-            <div class="ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M21 21l-4.2-4.2" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="10" cy="10" r="6" stroke="#fff" stroke-width="2"/>
-              </svg>
-            </div>
-            <div>
-              <h3>個別療育・小集団療育</h3>
-              <p>お子さま一人ひとりの特性やペースに合わせて、「できた！」をふやす支援を行います。少人数で関わり方や社会性も育てます。</p>
-            </div>
-          </div>
-
-          <div class="prog red">
-            <div class="ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M5 20V7l7-3 7 3v13" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                <path d="M9 20v-7h6v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div>
-              <h3>課題の個別に対応した自立支援</h3>
-              <p>学校での学びや生活に必要な力を、楽しみながら身につけていきます。</p>
-            </div>
-          </div>
-
-          <div class="prog navy">
-            <div class="ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M7 12c2-5 8-5 10 0" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                <path d="M12 21c-4-2-7-6-7-11a7 7 0 0 1 14 0c0 5-3 9-7 11z" stroke="#fff" stroke-width="2"/>
-              </svg>
-            </div>
-            <div>
-              <h3>保護者支援</h3>
-              <p>ご家庭での関わりやお困りごとを一緒に考え、安心して子育てができるよう寄り添います。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card" aria-label="ご利用の流れ">
-        <h2 class="h2">ご利用の流れ</h2>
-        <p class="mini">まずはお気軽にお問い合わせください</p>
-
-        <div class="flow">
-          <div class="step">
-            <div class="check" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M20 7L10 17l-5-5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="stepbox">まずはお気軽にお問い合わせください</div>
-          </div>
-
-          <div class="step">
-            <div class="check" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M20 7L10 17l-5-5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="stepbox">見学・体験</div>
-          </div>
-
-          <div class="step">
-            <div class="check" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M20 7L10 17l-5-5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="stepbox">受給者証の申請</div>
-          </div>
-
-          <div class="step">
-            <div class="check" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M20 7L10 17l-5-5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="stepbox">ご契約・個別支援計画の作成</div>
-          </div>
-        </div>
-
-        <details>
-          <summary>児童発達支援（時間・流れ）</summary>
-          <p><strong>時間：</strong>9:30 / 11:20 / 14:00 / 16:00（各100分）</p>
-          <ol>
-            <li>来所・手洗い・うがい・健康チェック・始まりの会</li>
-            <li>個別支援プログラム</li>
-            <li>小集団活動プログラム</li>
-            <li>自由遊び・片付け・帰宅準備・帰りの会</li>
-            <li>フィードバック・退所</li>
-          </ol>
-        </details>
-
-        <details>
-          <summary>放課後等デイサービス（時間・流れ）</summary>
-          <p><strong>時間：</strong>14:30〜17:40</p>
-          <ol>
-            <li>来所・手洗い・うがい・健康チェック・おやつ</li>
-            <li>始まりの会</li>
-            <li>個別支援プログラム</li>
-            <li>小集団活動プログラム</li>
-            <li>片付け・帰宅準備・帰りの会</li>
-            <li>退所</li>
-          </ol>
-        </details>
-
-        <div class="note">
-          <div class="nicon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M12 3a7 7 0 0 0-7 7v4a3 3 0 0 0 3 3h1l1 3h4l1-3h1a3 3 0 0 0 3-3v-4a7 7 0 0 0-7-7z"
-                    stroke="#2d7de0" stroke-width="2" stroke-linejoin="round"/>
-              <path d="M9 10h6" stroke="#2d7de0" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div>看護師在籍しておりますので、発作・医療的ケアのあるお子さまはご相談ください。</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="grid" aria-label="連絡先">
-      <div class="card">
-        <h2 class="h2">連絡先</h2>
-        <dl class="dl">
-          <div class="dt">住所</div>
-          <p class="dd">〒108-0023 東京都港区芝浦2丁目1番11号<br>グランドメゾン田町1F</p>
-
-          <div class="dt">TEL</div>
-          <p class="dd"><a href="tel:0367512633">03-6751-2633</a>　（担当）大塚</p>
-
-          <div class="dt">MAIL</div>
-          <p class="dd"><a href="mailto:info@kapilina.or.jp">info@kapilina.or.jp</a></p>
-        </dl>
-
-        <div class="btnrow">
-          <a class="btn primary" href="https://maps.app.goo.gl/7uNcNEGoDb6kfh1SA" target="_blank" rel="noopener">
-            Googleマップはこちら
-          </a>
-          <a class="btn" href="mailto:info@kapilina.or.jp">メールで問い合わせる</a>
-        </div>
-
-        <p class="mini" style="margin-top:12px;">
-          “BRIGHT BEGINNINGS, HAPPY HEARTS, AND ENDLESS POSSIBILITIES.”
-        </p>
-      </div>      
-    </section>
-
-    <footer>
-      © Kapilina Kids
-    </footer>
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <h2 class="title"><span>2月1日オープン児童募集</span></h2>
+      <p class="sub">発達に特性のあるお子さまの成長をサポートします。</p>
+    </div>
+    <div>
+      <div class="circle big"><img src="hero1.jpg"></div>
+      <div class="circle small"><img src="hero2.jpg"></div>
+    </div>
   </div>
+</section>
+
+<section class="grid">
+  <div class="card">
+    <div class="programs-title">
+      <h3>PROGRAMS</h3>
+      <div class="pillnote">一人ひとりに合わせた支援</div>
+    </div>
+    個別療育・小集団療育など、お子さまに合わせた支援を行います。
+  </div>
+
+  <div class="card">
+    <h3>お問い合わせ</h3>
+    〒108-0023 東京都港区芝浦2丁目1番11号<br>
+    TEL: 03-6751-2633<br>
+    MAIL: info@kapilina.or.jp<br>
+    <a class="btn" href="https://maps.app.goo.gl/7uNcNEGoDb6kfh1SA" target="_blank">Googleマップはこちら</a>
+  </div>
+</section>
+
+<footer>© Kapilina Kids</footer>
+</div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
