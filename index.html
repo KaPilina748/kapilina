@@ -7,17 +7,21 @@
   <meta name="description" content="児童発達支援・放課後等デイサービス カピリナキッズ（港区芝浦）。相談・見学・体験受付中。" />
 
   <style>
-    :root{
-      --bg: #f7e8e2;          /* パンフの淡いピンク */
-      --ink: #0b2d4d;         /* 濃紺 */
-      --muted: #35566f;
-      --white: #ffffff;
+:root{
+  --bg: #caffdf;          /* ベース：やわらかいミントグリーン */
 
-      --accent: #f2a45b;      /* オレンジ */
-      --accent2:#2d7de0;      /* ブルー */
-      --accent3:#e5573f;      /* 赤橙 */
-      --navyCard:#0c2f53;     /* 濃紺カード */
+  /* 文字色：濃紺→少しだけ軽く（重く見えない） */
+  --ink: #1d3b4a;
+  --muted: #476a74;
+  --white: #ffffff;
 
+  /* アクセント：ビビッド→くすみパステル寄り */
+  --accent:  #f0b27a;     /* オレンジ（やわらか） */
+  --accent2: #6aaad6;     /* ブルー（スモーキー） */
+  --accent3: #e68a7a;     /* 赤橙（コーラル寄り） */
+
+  /* 濃紺カード：黒っぽさを減らしてグリーン背景に馴染ませる */
+  --navyCard:#2b5562;
       --radius: 22px;
       --shadow: 0 14px 35px rgba(0,0,0,.08);
       --max: 1040px;
@@ -115,7 +119,7 @@
 
     /* hero */
     .hero{
-      background: rgba(255,255,255,.55);
+      background: rgba(255,255,255,.68);
       border: 1px solid rgba(255,255,255,.7);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
@@ -217,7 +221,7 @@
     }
 
     .card{
-      background: rgba(255,255,255,.6);
+      background: rgba(255,255,255,.72);
       border: 1px solid rgba(255,255,255,.75);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
@@ -488,12 +492,9 @@
         <div class="hero-right" aria-label="イメージ">
           <!-- 画像が無い場合でも破綻しないように fallback 表示 -->
           <div class="circle big">
-            <img src="hero1.jpg" alt="活動の様子（任意画像）" onerror="this.remove(); this.parentElement.classList.add('fallback'); this.parentElement.textContent='PHOTO';">
+            <img src="hero1.jpg" alt="入口写真" onerror="this.remove(); this.parentElement.classList.add('fallback'); this.parentElement.textContent='PHOTO';">
           </div>
-          <div class="circle small">
-            <img src="hero2.jpg" alt="活動の様子（任意画像）" onerror="this.remove(); this.parentElement.classList.add('fallback'); this.parentElement.textContent='PHOTO';">
-          </div>
-        </div>
+         </div>
       </div>
     </section>
 
@@ -659,5 +660,6 @@
   </div>
 </body>
 </html>
+
 
 
