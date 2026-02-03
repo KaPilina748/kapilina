@@ -3,67 +3,74 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>児童発達支援・放課後等デイサービス カピリナキッズ｜2月1日オープン! 児童募集</title>
-  <meta name="description" content="児童発達支援・放課後等デイサービス カピリナキッズ（港区芝浦）。2月1日オープン。相談会・体験会随時開催。" />
-
-  <!-- OGP（必要なら差し替え） -->
-  <meta property="og:title" content="カピリナキッズ｜2月1日オープン! 児童募集" />
-  <meta property="og:description" content="2月1日オープン｜相談会・体験会随時開催" />
-  <meta property="og:type" content="website" />
+  <title>カピリナキッズ｜2月1日オープン児童募集</title>
+  <meta name="description" content="児童発達支援・放課後等デイサービス カピリナキッズ（港区芝浦）。相談・見学・体験受付中。" />
 
   <style>
     :root{
-      --bg:#ffffff;
-      --ink:#2b2b2b;
-      --muted:#6b7280;
+      --bg: #f7e8e2;          /* パンフの淡いピンク */
+      --ink: #0b2d4d;         /* 濃紺 */
+      --muted: #35566f;
+      --white: #ffffff;
 
-      --brand:#7aa6b8;         /* 淡いブルー */
-      --accent:#e59aa0;        /* 淡いピンク */
-      --accent2:#9bb36a;       /* 淡いグリーン */
-      --card:#f7fafc;
-      --line:#e5e7eb;
+      --accent: #f2a45b;      /* オレンジ */
+      --accent2:#2d7de0;      /* ブルー */
+      --accent3:#e5573f;      /* 赤橙 */
+      --navyCard:#0c2f53;     /* 濃紺カード */
 
-      --radius:18px;
-      --shadow: 0 10px 30px rgba(0,0,0,.06);
-      --max: 980px;
+      --radius: 22px;
+      --shadow: 0 14px 35px rgba(0,0,0,.08);
+      --max: 1040px;
     }
 
     *{ box-sizing:border-box; }
     body{
       margin:0;
       font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
-      color:var(--ink);
-      background: radial-gradient(1200px 500px at 50% -100px, rgba(122,166,184,.18), transparent 60%),
-                  radial-gradient(900px 400px at 100% 0, rgba(229,154,160,.16), transparent 55%),
-                  var(--bg);
-      line-height:1.7;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.7;
     }
-
-    a{ color:inherit; }
+    a{ color: inherit; }
     .wrap{
       max-width: var(--max);
       margin: 0 auto;
-      padding: 24px 18px 64px;
+      padding: 26px 18px 70px;
+      position: relative;
     }
 
-    /* Header */
+    /* little stars */
+    .star{
+      position:absolute;
+      width: 54px; height:54px;
+      opacity:.9;
+      filter: drop-shadow(0 10px 16px rgba(0,0,0,.08));
+    }
+    .star.s1{ top: 120px; left: 16px; transform: rotate(10deg); }
+    .star.s2{ top: 520px; left: 36px; transform: rotate(-12deg); opacity:.75;}
+    .star.s3{ top: 140px; right: 34px; transform: rotate(-6deg); opacity:.8;}
+    @media (max-width: 780px){
+      .star{ display:none; }
+    }
+
+    /* top bar */
     header{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:16px;
-      padding: 10px 0 22px;
+      gap: 14px;
+      padding: 6px 0 18px;
     }
     .brand{
       display:flex;
       align-items:center;
-      gap:14px;
+      gap: 14px;
       min-width: 0;
     }
     .logo{
-      width:72px; height:72px;
-      border-radius: 16px;
-      background:#fff;
+      width: 68px; height: 68px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.65);
       box-shadow: var(--shadow);
       overflow:hidden;
       flex:0 0 auto;
@@ -71,336 +78,301 @@
     .logo img{ width:100%; height:100%; object-fit:cover; display:block; }
     .brand h1{
       margin:0;
-      font-size: 18px;
-      line-height: 1.3;
+      font-size: 16px;
+      line-height: 1.35;
+      letter-spacing: .02em;
     }
     .brand p{
       margin:4px 0 0;
-      color:var(--muted);
-      font-size: 13px;
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
+      font-size: 12.5px;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 62vw;
     }
-
-    .pill{
+    .top-badges{
+      display:flex;
+      gap:10px;
+      flex-wrap: wrap;
+      justify-content:flex-end;
+    }
+    .badge{
       display:inline-flex;
       align-items:center;
-      gap:10px;
-      padding: 10px 14px;
+      gap:8px;
+      padding: 10px 12px;
       border-radius: 999px;
-      background: rgba(122,166,184,.18);
-      border: 1px solid rgba(122,166,184,.25);
-      font-weight:700;
-      font-size: 13px;
-      color:#234a59;
+      font-weight: 900;
+      font-size: 12.5px;
+      border: 1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.7);
+      box-shadow: 0 10px 24px rgba(0,0,0,.06);
       white-space: nowrap;
     }
+    .badge.orange{ border-color: rgba(242,164,91,.35); }
+    .badge.blue{ border-color: rgba(45,125,224,.25); }
 
-    /* Hero */
+    /* hero */
     .hero{
-      background: rgba(255,255,255,.72);
-      border: 1px solid rgba(255,255,255,.6);
+      background: rgba(255,255,255,.55);
+      border: 1px solid rgba(255,255,255,.7);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 26px 18px;
-      position: relative;
+      padding: 22px;
       overflow:hidden;
-    }
-    .hero:before{
-      content:"";
-      position:absolute;
-      inset:-40px -40px auto auto;
-      width: 220px; height: 220px;
-      background: radial-gradient(circle at 30% 30%, rgba(229,154,160,.35), transparent 60%);
-      transform: rotate(15deg);
+      position: relative;
     }
     .hero-grid{
       display:grid;
-      grid-template-columns: 1.2fr .8fr;
+      grid-template-columns: 1.05fr .95fr;
       gap: 18px;
-      align-items: start;
-      position: relative;
+      align-items: center;
     }
-    @media (max-width: 780px){
+    @media (max-width: 900px){
       .hero-grid{ grid-template-columns: 1fr; }
     }
 
-    .headline{
+    .kicker{
+      font-weight: 900;
+      letter-spacing: .06em;
+      font-size: 14px;
       margin: 0 0 8px;
-      font-size: 44px;
+      color: var(--ink);
+    }
+    .title{
+      margin: 0;
+      font-size: 42px;
       line-height: 1.05;
       letter-spacing: .02em;
     }
-    .headline span{
+    .title .pill{
       display:inline-block;
-      padding: 6px 10px;
-      border-radius: 14px;
-      background: rgba(229,154,160,.18);
-      border: 1px solid rgba(229,154,160,.25);
+      padding: 8px 14px;
+      border-radius: 18px;
+      background: rgba(242,164,91,.25);
+      border: 1px solid rgba(242,164,91,.35);
     }
-    .tagline{
-      margin: 10px 0 14px;
-      font-weight: 700;
-      color:#3b3b3b;
+    .sub{
+      margin: 12px 0 0;
       font-size: 15px;
-    }
-    .subnote{
-      margin:0;
-      color:var(--muted);
-      font-size: 14px;
-    }
-
-    .cta{
-      margin-top: 16px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-    .cta .badge{
-      background: rgba(155,179,106,.16);
-      border: 1px solid rgba(155,179,106,.28);
-      border-radius: 999px;
-      padding: 10px 14px;
       font-weight: 800;
-      color:#2f3f17;
+      color: #1c3f5a;
     }
-    .cta .badge strong{ font-size: 16px; }
-
-    .aside-card{
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 16px;
-    }
-    .aside-card h3{
-      margin:0 0 8px;
+    .bullets{
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: #1c3f5a;
+      font-weight: 700;
       font-size: 14px;
-      letter-spacing: .02em;
-      color:#374151;
     }
-    .aside-card p{
-      margin:0;
-      font-size: 14px;
-      color:#374151;
+    .bullets li{ margin: 6px 0; }
+
+    .hero-right{
+      position: relative;
+      min-height: 260px;
+    }
+    .circle{
+      width: 210px; height: 210px;
+      border-radius: 999px;
+      border: 12px solid rgba(242,164,91,.85);
+      background: rgba(255,255,255,.9);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .circle img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .circle.small{
+      width: 128px; height: 128px;
+      border-width: 10px;
+      position:absolute;
+      bottom: -4px;
+      left: 120px;
+    }
+    .circle.big{
+      position:absolute;
+      top: 0;
+      right: 0;
+    }
+    .circle.fallback{
+      display:flex; align-items:center; justify-content:center;
+      font-weight: 900;
+      color: rgba(11,45,77,.6);
+      letter-spacing:.06em;
+    }
+    @media (max-width: 900px){
+      .hero-right{ min-height: 240px; }
+      .circle.big{ right: auto; left: 0; }
+      .circle.small{ left: 150px; }
     }
 
-    /* Sections */
-    .section{
-      margin-top: 18px;
+    /* layout blocks */
+    .grid{
+      margin-top: 16px;
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
     }
-    @media (max-width: 780px){
-      .section{ grid-template-columns: 1fr; }
+    @media (max-width: 900px){
+      .grid{ grid-template-columns: 1fr; }
     }
 
     .card{
-      background: rgba(255,255,255,.75);
-      border: 1px solid rgba(229,231,235,.9);
+      background: rgba(255,255,255,.6);
+      border: 1px solid rgba(255,255,255,.75);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 18px;
+      position: relative;
+      overflow:hidden;
     }
-    .card h2{
+    .h2{
       margin:0 0 10px;
-      font-size: 16px;
-      letter-spacing: .02em;
+      font-size: 22px;
+      letter-spacing:.02em;
     }
-    .card p{ margin:0; color:#374151; font-size: 14px; }
+    .mini{
+      margin:0;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 13.5px;
+    }
 
-    /* Values */
-    .values{
-      margin-top: 14px;
+    /* programs */
+    .programs-title{
       display:flex;
-      flex-wrap:wrap;
+      align-items:flex-end;
+      justify-content:space-between;
       gap:10px;
+      margin-bottom: 12px;
     }
-    .chip{
-      padding: 10px 12px;
+    .programs-title .eng{
+      font-weight: 1000;
+      letter-spacing: .08em;
+      font-size: 34px;
+    }
+    .pillnote{
+      padding: 8px 12px;
       border-radius: 999px;
-      font-weight: 800;
-      font-size: 13px;
-      border: 1px solid rgba(0,0,0,.06);
-      background: rgba(229,154,160,.18);
+      background: rgba(45,125,224,.12);
+      border: 1px solid rgba(45,125,224,.22);
+      font-weight: 900;
+      font-size: 12.5px;
+      white-space: nowrap;
     }
-    .chip:nth-child(2){ background: rgba(122,166,184,.18); }
-    .chip:nth-child(3){ background: rgba(155,179,106,.18); }
-    .chip:nth-child(4){ background: rgba(229,154,160,.12); }
 
-    /* Info list */
+    .prog-stack{
+      display:grid;
+      gap: 12px;
+    }
+    .prog{
+      border-radius: 22px;
+      padding: 14px 14px 14px 14px;
+      color:#fff;
+      display:grid;
+      grid-template-columns: 52px 1fr;
+      gap: 12px;
+      align-items:center;
+      box-shadow: 0 16px 28px rgba(0,0,0,.10);
+    }
+    .prog.blue{ background: var(--accent2); }
+    .prog.red{ background: var(--accent3); }
+    .prog.navy{ background: var(--navyCard); }
+    .prog h3{
+      margin:0;
+      font-size: 15px;
+      letter-spacing:.02em;
+    }
+    .prog p{
+      margin: 6px 0 0;
+      font-size: 13px;
+      opacity:.95;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+    .ico{
+      width: 52px; height: 52px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.18);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .ico svg{ width: 28px; height: 28px; }
+
+    /* flow */
+    .flow{
+      display:grid;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .step{
+      display:grid;
+      grid-template-columns: 44px 1fr;
+      gap: 12px;
+      align-items:center;
+    }
+    .check{
+      width: 44px; height: 44px;
+      border-radius: 999px;
+      background: #d94b2c;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: 0 12px 20px rgba(217,75,44,.25);
+    }
+    .check svg{ width: 22px; height: 22px; }
+    .stepbox{
+      background: rgba(255,255,255,.75);
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 16px;
+      padding: 12px 14px;
+      font-weight: 900;
+    }
+
+    /* details */
+    details{
+      margin-top: 10px;
+      background: rgba(255,255,255,.65);
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 18px;
+      padding: 12px 14px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight: 1000;
+      color: var(--ink);
+      letter-spacing:.02em;
+    }
+    details p, details ol{
+      margin: 10px 0 0;
+      color:#1c3f5a;
+      font-weight: 700;
+      font-size: 13.5px;
+    }
+    details ol{ padding-left: 18px; }
+    details li{ margin: 6px 0; }
+
+    /* contact */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
     .dl{
       display:grid;
-      grid-template-columns: 120px 1fr;
+      grid-template-columns: 92px 1fr;
       gap: 10px 12px;
       margin: 0;
       font-size: 14px;
     }
-    .dt{
-      font-weight: 800;
-      color:#374151;
-      align-self:start;
-      padding-top:2px;
-    }
-    .dd{
-      margin:0;
-      color:#374151;
-    }
-    .muted{ color:var(--muted); }
+    .dt{ font-weight: 1000; color: #123d5b; }
+    .dd{ margin:0; color:#123d5b; font-weight:800; }
 
-    /* Footer / Contact */
-    footer{
-      margin-top: 18px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
+    .btnrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin-top: 12px;
     }
-    @media (max-width: 780px){
-      footer{ grid-template-columns: 1fr; }
-    }
-
-    .contact{
-      border-left: 6px solid rgba(122,166,184,.55);
-    }
-    .contact .tel{
-      font-size: 22px;
-      font-weight: 900;
-      letter-spacing: .02em;
-      margin: 4px 0 6px;
-    }
-    .small{
-      font-size: 13px;
-      color:var(--muted);
-    }
-
     .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding: 12px 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(0,0,0,.08);
-      background: #fff;
-      box-shadow: 0 8px 20px rgba(0,0,0,.06);
-      font-weight: 800;
-      text-decoration:none;
-    }
-    .btn:hover{ transform: translateY(-1px); }
-  </style>
-</head>
-
-<body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">
-          <!-- 同フォルダに logo.jpg を置いてください（添付KAPILINA画像のリネーム推奨） -->
-          <img src="logo.jpg" alt="カピリナキッズ ロゴ" />
-        </div>
-        <div style="min-width:0">
-          <h1>児童発達支援・放課後等デイサービス<br>カピリナキッズ</h1>
-          <p>〒135-0062 東京都港区芝浦2丁目1番11号 グランドメゾン田町106</p>
-        </div>
-      </div>
-      <div class="pill">相談会・体験会 随時開催</div>
-    </header>
-
-    <main>
-      <section class="hero" aria-label="メイン">
-        <div class="hero-grid">
-          <div>
-            <h2 class="headline"><span>2月1日オープン! 児童募集</span></h2>
-            <p class="tagline">子どもの凸凹が、この世界のかがやきになる。</p>
-            <p class="subnote">皆さまのお越しをお待ちしております！</p>
-
-            <div class="cta" role="list">
-              <div class="badge" role="listitem"><strong>2月1日</strong> オープン</div>
-              <div class="badge" role="listitem">相談会・体験会 随時開催</div>
-            </div>
-
-            <div class="values" aria-label="大切にしていること">
-              <span class="chip">自己肯定感</span>
-              <span class="chip">自己効力感</span>
-              <span class="chip">コミュニケーション</span>
-              <span class="chip">保護者支援</span>
-            </div>
-          </div>
-
-          <aside class="aside-card">
-            <h3>医療的ケア等について</h3>
-            <p>看護師在籍しております。<br>
-              発作・医療的ケアのあるお子様はご相談ください。</p>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section" aria-label="紹介と概要">
-        <div class="card">
-          <h2>私たちの支援</h2>
-          <p>
-            「一人ひとりに合わせた支援 × みんなと育つ時間」<br>
-            お子さまの成長を支えるだけでなく、保護者の不安や悩みにも寄り添いながら、
-            一緒に歩む療育を行います。
-          </p>
-        </div>
-
-        <div class="card">
-          <h2>施設情報</h2>
-          <dl class="dl">
-            <div class="dt">対象</div>
-            <p class="dd">2才〜高校生まで／発達に心配のあるお子様</p>
-
-            <div class="dt">定員</div>
-            <p class="dd">10名</p>
-
-            <div class="dt">営業時間</div>
-            <p class="dd">
-              平日：9:30〜17:40<br>
-              土曜：9:30〜15:10<br>
-              <span class="muted">日祝日、夏季・年末年始はお休みします。</span>
-            </p>
-
-            <div class="dt">利用料金</div>
-            <p class="dd">定められた利用料金をお知らせします。</p>
-
-            <div class="dt">送迎</div>
-            <p class="dd">対応しておりません。</p>
-          </dl>
-        </div>
-      </section>
-
-      <footer aria-label="お問い合わせ">
-        <div class="card">
-          <h2>所在地</h2>
-          <p>
-            児童発達支援・課後等デイサービス カピリナキッズ<br>
-            〒135-0062<br>
-            東京都港区芝浦2丁目1番11号<br>
-            グランドメゾン田町106
-          </p>
-
-          <p style="margin-top:12px;">
-            <a class="btn" href="https://maps.app.goo.gl/7uNcNEGoDb6kfh1SA" target="_blank" rel="noopener">Googleマップで見る（アクセス）</a>
-          </p>
-        </div>
-
-        <div class="card contact">
-          <h2>お問い合わせ</h2>
-          <div class="tel">03-6751-2633</div>
-          <p style="margin:0 0 10px;">
-            mail：<a href="mailto:info@kapilina.or.jp">info@kapilina.or.jp</a><br>
-            <span class="small">受付時間：9:00〜18:00　（担当）大塚・福田</span>
-          </p>
-
-          <a class="btn" href="mailto:info@kapilina.or.jp">メールで問い合わせる</a>
-        </div>
-      </footer>
-    </main>
-  </div>
-</body>
-</html>
-
-
-
